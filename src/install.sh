@@ -31,57 +31,57 @@ echo "\n"
 # Installing apt-get packages
 echo "$red ···==> $mag Installing apt-get packages <==··· $white"
 echo "$red ==> $mag Installing apt-get ctags ... $white"
-sudo apt-get install -y ctags &
+sudo apt-get install -y ctags >> /dev/null
 wait
 echo "$red ==> $mag Installing apt-get gcc ... $white"
-sudo apt-get install -y gcc &
+sudo apt-get install -y gcc >> /dev/null 
 wait
 echo "$red ==> $mag Installing apt-get git ... $white"
-sudo apt-get install -y git &
+sudo apt-get install -y git >> /dev/null 
 wait
 echo "$red ==> $mag Installing apt-get make ... $white"
-sudo apt-get install -y make &
+sudo apt-get install -y make >> /dev/null 
 wait
 echo "$red ==> $mag Installing apt-get neovim ... $white"
-sudo apt-get install -y neovim &
+sudo apt-get install -y neovim >> /dev/null 
 wait
 echo "$red ==> $mag Installing apt-get nodejs ... $white"
-sudo apt-get install -y nodejs &
+sudo apt-get install -y nodejs >> /dev/null 
 wait
 echo "$red ==> $mag Installing apt-get npm ... $white"
-sudo apt-get install -y npm &
+sudo apt-get install -y npm >> /dev/null 
 wait
 echo "$red ==> $mag Installing apt-get python3-pip ... $white"
-sudo apt-get install -y python3-pip &
+sudo apt-get install -y python3-pip >> /dev/null  
 wait
 echo "/n"
 
 #Installing npm packages
 echo "$red ···==> $mag Installing npm packages <==··· $white"
 echo "$red ==> $mag Installing npm npm@latest ... $white"
-npm install -g npm@latest
+npm install -g npm@latest >> /dev/null 
 wait
 echo "$red ==> $mag Installing npm import-js ... $white"
-npm install -g import-js --unsafe-perm
+npm install -g import-js --unsafe-perm >> /dev/null 
 wait
 echo "$red ==> $mag Installing npm eslint ... $white"
-npm install -g eslint
+npm install -g eslint >> /dev/null 
 wait
 echo "$red ==> $mag Installing npm neovim ... $white"
-npm install -g neovim
+npm install -g neovim >> /dev/null 
 wait
 echo "$red ==> $mag Installing npm typescript ... $white"
-npm install -g typescript
+npm install -g typescript >> /dev/null 
 wait
 echo "$red ==> $mag Installing npm typescript-formatter ... $white"
-npm install -g typescript-formatter
+npm install -g typescript-formatter >> /dev/null 
 wait
 echo "\n"
 
 # Installing text editor enviorment
 mkdir /home/pi/.SpaceVim.d/ && echo "" > /home/pi/.SpaceVim.d/init.toml
 curl https://raw.githubusercontent.com/LiquidPropulsionGroup/script-repository/main/src/init.toml > /home/pi/.SpaceVim.d/init.toml
-curl -sLf https://spacevim.org/install.sh | bash &
+curl -sLf https://spacevim.org/install.sh | bash >> /dev/null 
 wait
 nvim +ProcInstall +qall &
 wait
@@ -89,10 +89,10 @@ echo "\n"
 
 # Installing EngineWebServer
 toilet -f 3d -F border Installing EngineWebServer | lolcat
-git clone https://github.com/LiquidPropulsionGroup/EngineWebServer.git &
+git clone https://github.com/LiquidPropulsionGroup/EngineWebServer.git >> /dev/null 
 wait
 cd EngineWebServer
-npm install &
+npm install >> /dev/null 
 wait
 echo "\n"
 
