@@ -1,5 +1,5 @@
 #!/bin/bash
 
-sudo bash -c 'apt-get -y upgrade >> /dev/null 2>&1 & disown'
+sudo apt-get update >> /dev/null 2>&1 &
 wait
 echo done
