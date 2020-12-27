@@ -1,5 +1,8 @@
 #!/bin/bash
 
 sudo apt-get update >> /dev/null 2>&1 &
-wait
+while wait; do
+  echo waitting
+done
 echo done
+
