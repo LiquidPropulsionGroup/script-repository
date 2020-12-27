@@ -18,5 +18,7 @@ cd EngineWebServer
 npm install
 ## Installing Spacevim
 cd ~
+mkdir /home/pi/.SpaceVim.d/
+echo "" > /home/pi/.SpaceVim.d/init.toml
 curl -sLf https://spacevim.org/install.sh | bash
 curl https://raw.githubusercontent.com/LiquidPropulsionGroup/script-repository/main/src/init.toml > /home/pi/.Spacevim.d/init.toml
