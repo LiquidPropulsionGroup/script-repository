@@ -19,4 +19,4 @@ npm install
 ## Installing Spacevim
 cd ~
 curl -sLf https://spacevim.org/install.sh | bash
-curl https://raw.githubusercontent.com/LiquidPropulsionGroup/script-repository/main/src/init.toml > /home/pi/.Spacevim.d/
+curl https://raw.githubusercontent.com/LiquidPropulsionGroup/script-repository/main/src/init.toml > /home/pi/.Spacevim.d/init.toml
