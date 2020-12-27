@@ -12,12 +12,12 @@ white=$'\e[0m'
 
 # Update
 echo "$red ==> $mag Updating the raspberry pi :-) $white"
-sudo apt-get update > /dev/null
+sudo apt-get update >> /dev/null
 wait
 
 # Upgrade
 echo "$red ==> $mag Upgrading system packages :3 $white"
-sudo apt-get -y upgrade > /dev/null
+sudo apt-get -y upgrade >> /dev/null
 wait
 
 # Installing lolcat & toilet for nice output
