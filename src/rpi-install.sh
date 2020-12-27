@@ -45,11 +45,12 @@ Upgrade () {
 
 # Installing lolcat & toilet for nice output
 Fancy-Tools () {
-  echo -ne "\r$red ==> $mag Getting Banner Tools ◕3◕ ............$white"
+  echo -ne "\r$red ==> $mag Getting Banner Tools ◕3◕ ................$white"
   Progress 39
   sudo apt-get install -y git lolcat toilet >> /dev/null 2>&1 & 
   wait
-  git clone https://github.com/xero/figlet-fonts.git >> /dev/null
+  git clone https://github.com/xero/figlet-fonts.git >> /dev/null 2>&1 &
+  wait
   sudo mv figlet-fonts/*.* /usr/share/figlet/
   rm -r figlet-fonts/
   echo ""
@@ -63,12 +64,12 @@ toilet -f 3d -F border LPG Setup | lolcat
 
 # Installing apt-get packages
 apt-get-pak () {
-  echo "$red ========> $mag Installing apt-get packages $red <======== $white"
+  echo "$red ========>$mag Installing apt-get packages $red<======== $white"
   echo -ne "\r$red ==> $mag Installing apt-get ctags ................$white"
   Progress 5
   sudo apt-get install -y ctags >> /dev/null 2>&1 & 
   wait
-  echo -ne "$red ==> $\rmag Installing apt-get gcc ..................$white"
+  echo -ne "\r$red ==> $\rmag Installing apt-get gcc ..................$white"
   Progress 10
   sudo apt-get install -y gcc >> /dev/null 2>&1 & 
   wait
@@ -100,7 +101,7 @@ apt-get-pak () {
 
 #Installing npm packages
 npm-pak () {
-  echo "$red ========> $mag Installing npm packages $red <======== $white"
+  echo "$red ========>$mag Installing npm packages $red<======== $white"
   echo -ne "\r$red ==> $mag Installing npm npm@latest ...............$white"
   Progress 6
   npm install -g npm@latest >> /dev/null 2>&1 & 
