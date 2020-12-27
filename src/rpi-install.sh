@@ -65,34 +65,34 @@ toilet -f 3d -F border LPG Setup | lolcat
 # Installing apt-get packages
 apt-get-pak () {
   echo "$red ========>$mag Installing apt-get packages $red<======== $white"
-  echo -ne "\r$red ==> $mag Installing apt-get ctags ................$white"
+  echo -ne "\r$red ==> $mag Installing apt-get ctags .................$white"
   Progress 5
   sudo apt-get install -y ctags >> /dev/null 2>&1 & 
   wait
-  echo -ne "\r$red ==> $\rmag Installing apt-get gcc ..................$white"
+  echo -ne "\r$red ==> $mag Installing apt-get gcc ...................$white"
   Progress 10
   sudo apt-get install -y gcc >> /dev/null 2>&1 & 
   wait
-  echo -ne "\r$red ==> $mag Installing apt-get git ..................$white"
+  echo -ne "\r$red ==> $mag Installing apt-get git ...................$white"
   sudo apt-get install -y git >> /dev/null 2>&1 & 
   wait
-  echo -ne "\r$red ==> $mag Installing apt-get make .................$white"
+  echo -ne "\r$red ==> $mag Installing apt-get make ..................$white"
   Progress 15
   sudo apt-get install -y make >> /dev/null 2>&1 & 
   wait
-  echo -ne "\r$red ==> $mag Installing apt-get neovim ...............$white"
+  echo -ne "\r$red ==> $mag Installing apt-get neovim ................$white"
   Progress 20
   sudo apt-get install -y neovim >> /dev/null 2>&1 & 
   wait
-  echo -ne "\r$red ==> $mag Installing apt-get nodejs ...............$white"
+  echo -ne "\r$red ==> $mag Installing apt-get nodejs ................$white"
   Progress 25
   sudo apt-get install -y nodejs >> /dev/null 2>&1 & 
   wait
-  echo -ne "\r$red ==> $mag Installing apt-get npm ..................$white"
+  echo -ne "\r$red ==> $mag Installing apt-get npm ...................$white"
   Progress 30
   sudo apt-get install -y npm >> /dev/null 2>&1 & 
   wait
-  echo -ne "\r$red ==> $mag Installing apt-get python3-pip ..........$white"
+  echo -ne "\r$red ==> $mag Installing apt-get python3-pip ...........$white"
   progress 39
   sudo apt-get install -y python3-pip >> /dev/null 2>&1 &   
   wait
@@ -101,28 +101,28 @@ apt-get-pak () {
 
 #Installing npm packages
 npm-pak () {
-  echo "$red ========>$mag Installing npm packages $red<======== $white"
-  echo -ne "\r$red ==> $mag Installing npm npm@latest ...............$white"
+  echo "$red =========>$mag Installing npm packages $red<========= $white"
+  echo -ne "\r$red ==> $mag Installing npm npm@latest ..............$white"
   Progress 6
   npm install -g npm@latest >> /dev/null 2>&1 & 
   wait
-  echo -ne "\r$red ==> $mag Installing npm import-js ................$white"
+  echo -ne "\r$red ==> $mag Installing npm import-js ...............$white"
   Progress 12
   npm install -g import-js --unsafe-perm >> /dev/null 2>&1 &  
   wait
-  echo -ne "\r$red ==> $mag Installing npm eslint ...................$white"
+  echo -ne "\r$red ==> $mag Installing npm eslint ..................$white"
   Progress 18
   npm install -g eslint >> /dev/null 2>&1 & 
   wait
-  echo -ne "\r$red ==> $mag Installing npm neovim ...................$white"
+  echo -ne "\r$red ==> $mag Installing npm neovim ..................$white"
   Progress 24
   npm install -g neovim >> /dev/null 2>&1 & 
   wait
-  echo -ne "\r$red ==> $mag Installing npm typescript ...............$white"
+  echo -ne "\r$red ==> $mag Installing npm typescript ..............$white"
   Progress 30
   npm install -g typescript >> /dev/null 2>&1 & 
   wait
-  echo -ne "\r$red ==> $mag Installing npm typescript-formatter .....$white"
+  echo -ne "\r$red ==> $mag Installing npm typescript-formatter ....$white"
   Progress 39
   npm install -g typescript-formatter >> /dev/null 2>&1 & 
   wait
