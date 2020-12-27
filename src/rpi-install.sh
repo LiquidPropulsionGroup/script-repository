@@ -156,3 +156,14 @@ Install-SpaceVim () {
 Bye-msg () {
   toilet -f 3d -F border DONE :3 | lolcat
 }
+
+# Running the script
+Set-Colors
+Update
+Upgrade
+Fancy-Tools
+LPG-Banner
+apt-get-pak
+npm-pak
+Install-SpaceVim
+Bye-msg
