@@ -131,8 +131,7 @@ npm-pak () {
 
 # Installing text editor enviorment
 Install-SpaceVim () {
-  mkdir /home/pi/.SpaceVim.d/ && echo "" > /home/pi/.SpaceVim.d/init.toml
-  curl https://raw.githubusercontent.com/LiquidPropulsionGroup/script-repository/main/src/init.toml > /home/pi/.SpaceVim.d/init.toml >> /dev/null 2>&1 &
+  curl https://raw.githubusercontent.com/LiquidPropulsionGroup/script-repository/main/src/init.toml -s > /home/pi/.SpaceVim.d/init.toml
   wait
   curl -sLf https://spacevim.org/install.sh | bash >> /dev/null 2>&1 & 
   wait
