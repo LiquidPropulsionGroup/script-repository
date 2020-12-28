@@ -96,22 +96,22 @@ npm-pak () {
   echo "$red ==========>$mag Installing npm packages $red<========== $white"
   echo -ne "\r$red ==> $mag Installing npm npm@latest ................$white"
   Progress 6
-  npm install -g --loglevel=silent npm@latest 
+  npm install -g --loglevel=silent --no-progress npm@latest 
   echo -ne "\r$red ==> $mag Installing npm import-js .................$white"
   Progress 12
-  npm install -g --loglevel=silent --unsafe-perm=true import-js  
+  npm install -g --loglevel=silent --no-progress --unsafe-perm=true import-js  
   echo -ne "\r$red ==> $mag Installing npm eslint ....................$white"
   Progress 18
-  npm install -g --loglevel=silent eslint 
+  npm install -g --loglevel=silent --no-progress eslint 
   echo -ne "\r$red ==> $mag Installing npm neovim ....................$white"
   Progress 24
-  npm install -g --loglevel=silent neovim 
+  npm install -g --loglevel=silent --no-progress neovim 
   echo -ne "\r$red ==> $mag Installing npm typescript ................$white"
   Progress 30
-  npm install -g --loglevel=silent typescript 
+  npm install -g --loglevel=silent --no-progress typescript 
   echo -ne "\r$red ==> $mag Installing npm typescript-formatter ......$white"
   Progress 39
-  npm install -g --loglevel=silent typescript-formatter 
+  npm install -g --loglevel=silent --no-progress typescript-formatter 
   echo -ne "\r$red ===============================================\n$white"
 }
 
@@ -119,16 +119,16 @@ pip-pak () {
   echo "$red ==========>$mag Installing pip packages $red<========== $white"
   echo -ne "\r$red ==> $mag Installing pip pynvim ....................$white"
   Progress 10
-  pip3 install -q pynvim
+  pip3 install -q --no-warn-script-location pynvim
   echo -ne "\r$red ==> $mag Installing pip isort .....................$white"
   Progress 20
-  pip3 install -q isort
+  pip3 install -q --no-warn-script-location isort
   echo -ne "\r$red ==> $mag Installing pip pylint ....................$white"
   Progress 30
-  pip3 install -q pylint
+  pip3 install -q --no-warn-script-location pylint
   echo -ne "\r$red ==> $mag Installing pip yapf ......................$white"
   Progress 39
-  pip3 install -q yapf
+  pip3 install -q --no-warn-script-location yapf
   echo -ne "\r$red ===============================================\n$white"
 }
 
