@@ -29,7 +29,7 @@ Progress () {
 
 # Update
 Update () {  
-  echo -ne "\r$red ==> $mag Updating the raspberry pi :-) ...........$white"
+  echo -ne "\r$red ==> $mag Updating the raspberry pi :-) ............$white"
   Progress 12
   sudo apt-get update >> /dev/null 2>&1 &
   wait
@@ -37,7 +37,7 @@ Update () {
 
 # Upgrade
 Upgrade () {
-  echo -ne "\r$red ==> $mag Upgrading system packages :3 ............$white"
+  echo -ne "\r$red ==> $mag Upgrading system packages :3 .............$white"
   Progress 24
   sudo apt-get -y upgrade >> /dev/null 2>&1 &
   wait
@@ -45,7 +45,7 @@ Upgrade () {
 
 # Installing lolcat & toilet for nice output
 Fancy-Tools () {
-  echo -ne "\r$red ==> $mag Getting Banner Tools ◕3◕ ................$white"
+  echo -ne "\r$red ==> $mag Getting Banner Tools ◕3◕ .................$white"
   Progress 39
   sudo apt-get install -y git lolcat toilet >> /dev/null 2>&1 & 
   wait
@@ -53,7 +53,7 @@ Fancy-Tools () {
   wait
   sudo mv figlet-fonts/*.* /usr/share/figlet/
   rm -r figlet-fonts/
-  echo ""
+  echo -ne "\r$red ===============================================\n$white"
 }
 
 # Print LPG Setup
@@ -96,7 +96,7 @@ apt-get-pak () {
   Progress 39
   sudo apt-get install -y python3-pip >> /dev/null 2>&1 &   
   wait
-  echo -ne "\r$red ================================================$white"
+  echo -ne "\r$red ===============================================\n$white"
 }
 
 #Installing npm packages
@@ -126,7 +126,7 @@ npm-pak () {
   Progress 39
   npm install -g typescript-formatter >> /dev/null 2>&1 & 
   wait
-  echo -ne "\r$red ================================================$white"
+  echo -ne "\r$red ===============================================\n$white"
 }
 
 # Installing text editor enviorment
@@ -151,7 +151,7 @@ Install-SpaceVim () {
   cd EngineWebServer
   npm install >> /dev/null 2>&1 & 
   wait
-  echo -ne "\r$red ================================================$white"
+  echo -ne "\r$red ===============================================\n$white"
 }
 
 # Goodbye Message
