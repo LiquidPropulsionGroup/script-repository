@@ -4,8 +4,6 @@ In the src directory located in this repository are the install scripts nessesar
 raspberry pi for the Engine Web Server. Curl any script with the tag -sLf and pipe it into bash
 to run that script on your raspberry pi.
 
-<br>
-
 ## Commands
 
-1) Run `curl -sLf https://raw.githubusercontent.com/LiquidPropulsionGroup/script-repository/main/src/rpi-install.sh | bash` to run the rpi-install.sh script. 
+1) Run `curl -sLf https://raw.githubusercontent.com/LiquidPropulsionGroup/script-repository/main/src/rpi-install.sh | bash` to run the `rpi-install.sh` script. 
