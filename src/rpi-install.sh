@@ -31,16 +31,14 @@ Progress () {
 Update () {  
   echo -ne "\r$red ==> $mag Updating the raspberry pi :-) ............$white"
   Progress 12
-  sudo apt-get update >> /dev/null 2>&1 &
-  wait
+  sudo apt-get -qq update
 }
 
 # Upgrade
 Upgrade () {
   echo -ne "\r$red ==> $mag Upgrading system packages :3 .............$white"
   Progress 24
-  sudo apt-get -y upgrade >> /dev/null 2>&1 &
-  wait
+  sudo apt-get -y -qq upgrade
 }
 
 # Installing lolcat & toilet for nice output
