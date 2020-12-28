@@ -93,7 +93,7 @@ apt-get-pak () {
   sudo apt-get install -y npm >> /dev/null 2>&1 & 
   wait
   echo -ne "\r$red ==> $mag Installing apt-get python3-pip ...........$white"
-  progress 39
+  Progress 39
   sudo apt-get install -y python3-pip >> /dev/null 2>&1 &   
   wait
   echo ""
@@ -131,8 +131,9 @@ npm-pak () {
 
 # Installing text editor enviorment
 Install-SpaceVim () {
-  mkdir /home/pi/.SpaceVim.d/ && echo "" > /home/pi/.SpaceVim.d/init.toml
-  curl https://raw.githubusercontent.com/LiquidPropulsionGroup/script-repository/main/src/init.toml > /home/pi/.SpaceVim.d/init.toml
+  echo "" > /home/pi/.SpaceVim.d/init.toml
+  curl https://raw.githubusercontent.com/LiquidPropulsionGroup/script-repository/main/src/init.toml > /home/pi/.SpaceVim.d/init.toml >> /dev/null 2>&1 &
+  wait
   curl -sLf https://spacevim.org/install.sh | bash >> /dev/null 2>&1 & 
   wait
   nvim +ProcInstall +qall &
