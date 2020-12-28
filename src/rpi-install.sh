@@ -96,28 +96,22 @@ npm-pak () {
   echo "$red ==========>$mag Installing npm packages $red<========== $white"
   echo -ne "\r$red ==> $mag Installing npm npm@latest ................$white"
   Progress 6
-  npm install -g npm@latest >> /dev/null 2>&1 & 
-  wait
+  npm install -g --silent npm@latest 
   echo -ne "\r$red ==> $mag Installing npm import-js .................$white"
   Progress 12
-  npm install -g import-js --unsafe-perm >> /dev/null 2>&1 &  
-  wait
+  npm install -g --silent import-js --unsafe-perm=true  
   echo -ne "\r$red ==> $mag Installing npm eslint ....................$white"
   Progress 18
-  npm install -g eslint >> /dev/null 2>&1 & 
-  wait
+  npm install -g --silent eslint 
   echo -ne "\r$red ==> $mag Installing npm neovim ....................$white"
   Progress 24
-  npm install -g neovim >> /dev/null 2>&1 & 
-  wait
+  npm install -g --silent neovim 
   echo -ne "\r$red ==> $mag Installing npm typescript ................$white"
   Progress 30
-  npm install -g typescript >> /dev/null 2>&1 & 
-  wait
+  npm install -g --silent typescript 
   echo -ne "\r$red ==> $mag Installing npm typescript-formatter ......$white"
   Progress 39
-  npm install -g typescript-formatter >> /dev/null 2>&1 & 
-  wait
+  npm install -g --silent typescript-formatter 
   echo -ne "\r$red ===============================================\n$white"
 }
 
