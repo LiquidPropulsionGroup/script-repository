@@ -129,6 +129,19 @@ npm-pak () {
   echo -ne "\r$red ===============================================\n$white"
 }
 
+pip-pak () {
+  echo "$red ==========>$mag Installing pip packages $red<========== $white"
+  echo -ne "\r$red ==> $mag Installing pip pynvim ....................$white"
+  pip install -q pynvim
+  echo -ne "\r$red ==> $mag Installing pip isort .....................$white"
+  pip install -q isort
+  echo -ne "\r$red ==> $mag Installing pip pylint ....................$white"
+  pip install -q pylint
+  echo -ne "\r$red ==> $mag Installing pip yapf ......................$white"
+  pip install -q yapf
+  echo -ne "\r$red ===============================================\n$white"
+}
+
 # Installing text editor enviorment
 Install-SpaceVim () {
   mkdir ~/.SpaceVim.d/
