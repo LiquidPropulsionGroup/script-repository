@@ -118,12 +118,16 @@ npm-pak () {
 pip-pak () {
   echo "$red ==========>$mag Installing pip packages $red<========== $white"
   echo -ne "\r$red ==> $mag Installing pip pynvim ....................$white"
+  Progress 10
   pip install -q pynvim
   echo -ne "\r$red ==> $mag Installing pip isort .....................$white"
+  Progress 20
   pip install -q isort
   echo -ne "\r$red ==> $mag Installing pip pylint ....................$white"
+  Progress 30
   pip install -q pylint
   echo -ne "\r$red ==> $mag Installing pip yapf ......................$white"
+  Progress 39
   pip install -q yapf
   echo -ne "\r$red ===============================================\n$white"
 }
