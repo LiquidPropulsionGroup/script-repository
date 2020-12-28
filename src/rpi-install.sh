@@ -96,7 +96,7 @@ apt-get-pak () {
   Progress 39
   sudo apt-get install -y python3-pip >> /dev/null 2>&1 &   
   wait
-  echo ""
+  echo -ne "\r$red ================================================$white"
 }
 
 #Installing npm packages
@@ -126,12 +126,12 @@ npm-pak () {
   Progress 39
   npm install -g typescript-formatter >> /dev/null 2>&1 & 
   wait
-  echo ""
+  echo -ne "\r$red ================================================$white"
 }
 
 # Installing text editor enviorment
 Install-SpaceVim () {
-  echo "" > /home/pi/.SpaceVim.d/init.toml
+  mkdir /home/pi/.SpaceVim.d/ && echo "" > /home/pi/.SpaceVim.d/init.toml
   curl https://raw.githubusercontent.com/LiquidPropulsionGroup/script-repository/main/src/init.toml > /home/pi/.SpaceVim.d/init.toml >> /dev/null 2>&1 &
   wait
   curl -sLf https://spacevim.org/install.sh | bash >> /dev/null 2>&1 & 
@@ -151,7 +151,7 @@ Install-SpaceVim () {
   cd EngineWebServer
   npm install >> /dev/null 2>&1 & 
   wait
-  echo ""
+  echo -ne "\r$red ================================================$white"
 }
 
 # Goodbye Message
