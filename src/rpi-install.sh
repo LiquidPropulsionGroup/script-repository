@@ -170,5 +170,6 @@ Fancy-Tools
 LPG-Banner
 apt-get-pak
 npm-pak
+pip-pak
 Install-SpaceVim
 Bye-msg
