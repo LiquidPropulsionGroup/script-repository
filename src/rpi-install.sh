@@ -97,7 +97,7 @@ npm-pak () {
   npm install -g --loglevel=silent --no-progress npm@latest 
   echo -ne "\r$red ==> $mag Installing npm import-js .................$white"
   Progress 12
-  sudo npm install -g --loglevel=silent --no-progress --allow-root --unsafe-perm=true import-js  
+  sudo npm install -g --loglevel=silent --no-progress --allow-root --unsafe-perm=true import-js >> /dev/null 2>&1  
   echo -ne "\r$red ==> $mag Installing npm eslint ....................$white"
   Progress 18
   npm install -g --loglevel=silent --no-progress eslint 
