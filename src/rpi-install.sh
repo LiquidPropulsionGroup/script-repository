@@ -31,14 +31,14 @@ Progress () {
 Update () {  
   echo -ne "\r$red ==> $mag Updating the raspberry pi :-) ............$white"
   Progress 12
-  sudo apt-get -qq update
+  sudo apt-get -qq update >> /dev/null 2>&1
 }
 
 # Upgrade
 Upgrade () {
   echo -ne "\r$red ==> $mag Upgrading system packages :3 .............$white"
   Progress 24
-  sudo apt-get -y -qq upgrade
+  sudo apt-get -y -qq upgrade >> /dev/null 2>&1
 }
 
 # Installing lolcat & toilet for nice output
@@ -51,6 +51,7 @@ Fancy-Tools () {
   wait
   sudo mv figlet-fonts/*.* /usr/share/figlet/
   rm -r figlet-fonts/
+  wget https://bitbucket.org/MattHawkinsUK/rpispy-misc/raw/3c60cef076322916ecd22f4a540f626d7f81acbe/python/mypi.py >> /dev/null 2>&1
   echo -ne "\r$red ===============================================\n$white"
 }
 
@@ -65,27 +66,27 @@ apt-get-pak () {
   echo "$red ========>$mag Installing apt-get packages $red<======== $white"
   echo -ne "\r$red ==> $mag Installing apt-get ctags .................$white"
   Progress 5
-  sudo apt-get install -y -qq ctags
+  sudo apt-get install -y -qq ctags >> /dev/null 2>&1
   echo -ne "\r$red ==> $mag Installing apt-get gcc ...................$white"
   Progress 10
-  sudo apt-get install -y -qq gcc 
+  sudo apt-get install -y -qq gcc >> /dev/null 2>&1
   echo -ne "\r$red ==> $mag Installing apt-get git ...................$white"
-  sudo apt-get install -y -qq git 
+  sudo apt-get install -y -qq git >> /dev/null 2>&1 
   echo -ne "\r$red ==> $mag Installing apt-get make ..................$white"
   Progress 15
-  sudo apt-get install -y -qq make 
+  sudo apt-get install -y -qq make >> /dev/null 2>&1
   echo -ne "\r$red ==> $mag Installing apt-get neovim ................$white"
   Progress 20
-  sudo apt-get install -y -qq neovim 
+  sudo apt-get install -y -qq neovim >> /dev/null 2>&1
   echo -ne "\r$red ==> $mag Installing apt-get nodejs ................$white"
   Progress 25
-  sudo apt-get install -y -qq nodejs 
+  sudo apt-get install -y -qq nodejs >> /dev/null 2>&1 
   echo -ne "\r$red ==> $mag Installing apt-get npm ...................$white"
   Progress 30
-  sudo apt-get install -y -qq npm 
+  sudo apt-get install -y -qq npm >> /dev/null 2>&1
   echo -ne "\r$red ==> $mag Installing apt-get python3-pip ...........$white"
   Progress 39
-  sudo apt-get install -y -qq python3-pip   
+  sudo apt-get install -y -qq python3-pip >> /dev/null 2>&1 
   echo -ne "\r$red ===============================================\n$white"
 }
 
@@ -94,22 +95,22 @@ npm-pak () {
   echo "$red ==========>$mag Installing npm packages $red<========== $white"
   echo -ne "\r$red ==> $mag Installing npm npm@latest ................$white"
   Progress 6
-  npm install -g --loglevel=silent --no-progress npm@latest 
+  npm install -g --loglevel=silent --no-progress npm@latest >> /dev/null 2>&1 
   echo -ne "\r$red ==> $mag Installing npm import-js .................$white"
   Progress 12
   sudo npm install -g --loglevel=silent --no-progress --allow-root --unsafe-perm=true import-js >> /dev/null 2>&1  
   echo -ne "\r$red ==> $mag Installing npm eslint ....................$white"
   Progress 18
-  npm install -g --loglevel=silent --no-progress eslint 
+  npm install -g --loglevel=silent --no-progress eslint >> /dev/null 2>&1
   echo -ne "\r$red ==> $mag Installing npm neovim ....................$white"
   Progress 24
-  npm install -g --loglevel=silent --no-progress neovim 
+  npm install -g --loglevel=silent --no-progress neovim >> /dev/null 2>&1
   echo -ne "\r$red ==> $mag Installing npm typescript ................$white"
   Progress 30
-  npm install -g --loglevel=silent --no-progress typescript 
+  npm install -g --loglevel=silent --no-progress typescript >> /dev/null 2>&1
   echo -ne "\r$red ==> $mag Installing npm typescript-formatter ......$white"
   Progress 39
-  npm install -g --loglevel=silent --no-progress typescript-formatter 
+  npm install -g --loglevel=silent --no-progress typescript-formatter >> /dev/null 2>&1
   echo -ne "\r$red ===============================================\n$white"
 }
 
@@ -117,16 +118,16 @@ pip-pak () {
   echo "$red ==========>$mag Installing pip packages $red<========== $white"
   echo -ne "\r$red ==> $mag Installing pip pynvim ....................$white"
   Progress 10
-  pip3 install -q --no-warn-script-location pynvim
+  pip3 install -q --no-warn-script-location pynvim >> /dev/null 2>&1
   echo -ne "\r$red ==> $mag Installing pip isort .....................$white"
   Progress 20
-  pip3 install -q --no-warn-script-location isort
+  pip3 install -q --no-warn-script-location isort >> /dev/null 2>&1
   echo -ne "\r$red ==> $mag Installing pip pylint ....................$white"
   Progress 30
-  pip3 install -q --no-warn-script-location pylint
+  pip3 install -q --no-warn-script-location pylint >> /dev/null 2>&1
   echo -ne "\r$red ==> $mag Installing pip yapf ......................$white"
   Progress 39
-  pip3 install -q --no-warn-script-location yapf
+  pip3 install -q --no-warn-script-location yapf >> /dev/null 2>&1
   echo -ne "\r$red ===============================================\n$white"
 }
 
