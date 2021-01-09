@@ -1,7 +1,7 @@
 [options]
     colorscheme = "srcery"
     colorscheme_bg = "dark"
-    enable_guicolors = false
+    enable_guicolors = true
     statusline_separator = "nil"
     statusline_iseparator = "bar"
     buffer_index_type = 4
