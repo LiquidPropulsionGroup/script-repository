@@ -146,7 +146,7 @@ Install-SpaceVim () {
   toilet -f 3d Installing | lolcat && toilet -f 3d EngineWebServer | lolcat
   echo -ne "\r$red ==> $mag Getting Repository ......................$white"
   Progress 20
-  git clone https://github.com/LiquidPropulsionGroup/EngineWebServer.git >> /dev/null 2>&1 &  
+  git clone https://github.com/LiquidPropulsionGroup/EnginePythonServer >> /dev/null 2>&1 &  
   wait
   echo -ne "\r$red ==> $mag Installing Webserver Dependencies .......$white"
   Progress 39
@@ -156,6 +156,7 @@ Install-SpaceVim () {
   echo -ne "\r$red ===============================================\n$white"
   
   # Installing Operation Scripts
+  cd ..
   toilet -f 3d Installing | lolcat && toilet -f 3d OperationScripts | lolcat
   echo -ne "\r$red ==> $mag Getting Repository ......................$white"
   Progress 20
