@@ -172,7 +172,7 @@ Install-SpaceVim () {
 
 # Goodbye Message
 Bye-msg () {
-  toilet -f 3d -F border DONE :3 | lolcat
+  toilet -f 3d -F border DONE | lolcat
 }
 
 # Running the script
