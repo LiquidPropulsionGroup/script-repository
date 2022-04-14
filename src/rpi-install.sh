@@ -150,7 +150,7 @@ Install-SpaceVim () {
   wait
   echo -ne "\r$red ==> $mag Installing Webserver Dependencies .......$white"
   Progress 39
-  cd EngineWebServer
+  cd EnginePythonServer
   npm install >> /dev/null 2>&1 & 
   wait
   echo -ne "\r$red ===============================================\n$white"
