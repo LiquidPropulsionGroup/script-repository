@@ -154,6 +154,19 @@ Install-SpaceVim () {
   npm install >> /dev/null 2>&1 & 
   wait
   echo -ne "\r$red ===============================================\n$white"
+  
+  # Installing Operation Scripts
+  toilet -f 3d Installing | lolcat && toilet -f 3d OperationScripts | lolcat
+  echo -ne "\r$red ==> $mag Getting Repository ......................$white"
+  Progress 20
+  git clone https://github.com/LiquidPropulsionGroup/OperationScripts.git >> /dev/null 2>&1 &
+  wait
+  echo -ne "\r$red ==> $mag Installing Operation Scripts.............$white"
+  Progress 39
+  cd OperationScripts
+  npm install >> /dev/null 2>&1 &
+  wait
+  echo -ne "\r$red ===============================================\n$white"
 }
 
 # Goodbye Message
