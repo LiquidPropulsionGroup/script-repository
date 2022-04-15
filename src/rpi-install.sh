@@ -185,7 +185,7 @@ NetworkInstall () {
 # Goodbye Message
 Bye-msg () {
   toilet -f 3d -F border DONE | lolcat
-  read -r -p "A restart is required to update group permissions. Press any key to restart now, or CTRL+C to escape." VAR
+  read secondyn < /proc/${PPID}/fd/0
   sudo reboot
 }
 
