@@ -168,6 +168,12 @@ Install-SpaceVim () {
   npm install >> /dev/null 2>&1 &
   wait
   echo -ne "\r$red ===============================================\n$white"
+  
+  # Install docker-compose
+  curl -sSL https://get.docker.com | sh
+  sudo usermod -aG docker ${USER}
+  sudo pip3 install docker-compose
+  sudo systemctl enable docker
 }
 
 # Goodbye Message
