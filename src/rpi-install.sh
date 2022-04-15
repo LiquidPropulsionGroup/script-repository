@@ -133,13 +133,13 @@ pip-pak () {
 
 # Installing text editor enviorment
 Install-SpaceVim () {
-  mkdir ~/.SpaceVim.d/
-  curl https://raw.githubusercontent.com/LiquidPropulsionGroup/script-repository/main/src/init.toml -s > /home/pi/.SpaceVim.d/init.toml
-  wait
-  curl -sLf https://spacevim.org/install.sh | bash >> /dev/null 2>&1 & 
-  wait
-  nvim +ProcInstall +qall &
-  wait
+  #mkdir ~/.SpaceVim.d/
+  # curl https://raw.githubusercontent.com/LiquidPropulsionGroup/script-repository/main/src/init.toml -s > /home/pi/.SpaceVim.d/init.toml
+  #wait
+  #curl -sLf https://spacevim.org/install.sh | bash >> /dev/null 2>&1 & 
+  #wait
+  #nvim +ProcInstall +qall &
+  #wait
   echo ""
 
   # Installing EngineWebServer
