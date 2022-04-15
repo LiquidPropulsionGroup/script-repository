@@ -176,6 +176,12 @@ Install-SpaceVim () {
   sudo systemctl enable docker
 }
 
+# Modify 
+NetworkInstall () {
+  echo "interface eth0" >> /etc/dhcpcd.conf
+  echo "request 192.168.137.10" >> /etc/dhcpcd.conf
+}
+
 # Goodbye Message
 Bye-msg () {
   toilet -f 3d -F border DONE | lolcat
