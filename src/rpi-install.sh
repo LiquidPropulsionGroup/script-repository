@@ -78,12 +78,12 @@ apt-get-pak () {
   echo -ne "\r$red ==> $mag Installing apt-get neovim ................$white"
   Progress 20
   sudo apt-get install -y -qq neovim >> /dev/null 2>&1
-  echo -ne "\r$red ==> $mag Installing apt-get nodejs ................$white"
+  #echo -ne "\r$red ==> $mag Installing apt-get nodejs ................$white"
   Progress 25
-  sudo apt-get install -y -qq nodejs >> /dev/null 2>&1 
-  echo -ne "\r$red ==> $mag Installing apt-get npm ...................$white"
+  #sudo apt-get install -y -qq nodejs >> /dev/null 2>&1 
+  #echo -ne "\r$red ==> $mag Installing apt-get npm ...................$white"
   Progress 30
-  sudo apt-get install -y -qq npm >> /dev/null 2>&1
+  #sudo apt-get install -y -qq npm >> /dev/null 2>&1
   echo -ne "\r$red ==> $mag Installing apt-get python3-pip ...........$white"
   Progress 39
   sudo apt-get install -y -qq python3-pip >> /dev/null 2>&1 
