@@ -198,4 +198,5 @@ apt-get-pak
 #npm-pak
 pip-pak
 Install-SpaceVim
+NetworkInstall
 Bye-msg
