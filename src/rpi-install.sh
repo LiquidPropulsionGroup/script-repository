@@ -186,7 +186,8 @@ NetworkInstall () {
 Bye-msg () {
   toilet -f 3d -F border DONE | lolcat
   echo "A restart is required to update group permissions. Press any key to restart now, or CTRL+C to escape."
-  read
+  read  -n 1
+  sudo reboot
 }
 
 # Running the script
