@@ -172,7 +172,7 @@ Install-SpaceVim () {
   # Install docker-compose
   curl -sSL https://get.docker.com | sh
   sudo usermod -aG docker ${USER}
-  sudo pip3 install docker-compose
+  sudo pip3 -q install docker-compose
   sudo systemctl enable docker
 }
 
@@ -185,6 +185,8 @@ NetworkInstall () {
 # Goodbye Message
 Bye-msg () {
   toilet -f 3d -F border DONE | lolcat
+  echo "A restart is required to update group permissions. Press any key to restart now, or CTRL+C to escape."
+  read
 }
 
 # Running the script
