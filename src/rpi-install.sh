@@ -185,7 +185,6 @@ NetworkInstall () {
 # Goodbye Message
 Bye-msg () {
   toilet -f 3d -F border DONE | lolcat
-  read secondyn < /proc/${PPID}/fd/0
   sudo reboot
 }
 
