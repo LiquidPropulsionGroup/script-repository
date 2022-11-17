@@ -133,16 +133,7 @@ pip-pak () {
 }
 
 # Installing text editor enviorment
-Install-SpaceVim () {
-  #mkdir ~/.SpaceVim.d/
-  # curl https://raw.githubusercontent.com/LiquidPropulsionGroup/script-repository/main/src/init.toml -s > /home/pi/.SpaceVim.d/init.toml
-  #wait
-  #curl -sLf https://spacevim.org/install.sh | bash >> /dev/null 2>&1 & 
-  #wait
-  #nvim +ProcInstall +qall &
-  #wait
-  echo ""
-
+Install-Repos () {
   # Installing EngineWebServer
   toilet -f 3d Installing | lolcat && toilet -f 3d EngineWebServer | lolcat
   echo -ne "\r$red ==> $mag Getting Repository ......................$white"
@@ -169,21 +160,32 @@ Install-SpaceVim () {
   npm install >> /dev/null 2>&1 &
   wait
   echo -ne "\r$red ===============================================\n$white"
-  
-  # Install docker-compose
-  curl -fsSL https://get.docker.com -o get-docker.sh
-  sudo sh get-docker.sh
-  sudo dpkg --configure -a
-  sudo sh get-docker.sh
-  sudo usermod -aG docker ${USER}
-  sudo apt install docker-compose
-  sudo systemctl enable docker
 }
 
 # Modify 
 NetworkInstall () {
   echo "interface eth0" >> /etc/dhcpcd.conf
   echo "request 192.168.137.10" >> /etc/dhcpcd.conf
+}
+
+# Docker preinstall
+Docker-Preinstall () {
+  # Install docker-compose
+  curl -fsSL https://get.docker.com -o get-docker.sh
+  sudo sh get-docker.sh
+  echo "If the installation fails here, then Docker still requires a restart to install"
+  echo "Use `sudo reboot` and then input the following sequence of commands:"
+  echo "sudo dpkg --configure -a"
+  sudo dpkg --configure -a
+  echo "sudo sh get-docker.sh"
+  sudo sh get-docker.sh
+  echo "sudo usermod -aG docker ${USER}"
+  sudo usermod -aG docker ${USER}
+  echo "sudo apt install docker-compose"
+  sudo apt install docker-compose
+  echo "sudo systemctl enable docker"
+  sudo systemctl enable docker
+  echo "Verify docker with `docker ps` and verify docker-compose by navigating to /EnginePythonServer and trying `docker-compose`"
 }
 
 # Goodbye Message
@@ -201,6 +203,7 @@ LPG-Banner
 apt-get-pak
 #npm-pak
 pip-pak
-Install-SpaceVim
+Install-Repos
 NetworkInstall
+Docker-Preinstall
 Bye-msg
