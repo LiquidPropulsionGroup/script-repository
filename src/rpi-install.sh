@@ -174,7 +174,7 @@ Docker-Preinstall () {
   curl -fsSL https://get.docker.com -o get-docker.sh
   echo -ne "\r$cyn If the installation fails here, then Docker still requires a restart to install"
   sleep 1
-  echo -ne "Use `sudo reboot` and then input the following sequence of commands:"
+  echo -ne "Use sudo reboot and then input the following sequence of commands:"
   sleep 1
   echo -ne "sudo dpkg --configure -a"
   sleep 1
