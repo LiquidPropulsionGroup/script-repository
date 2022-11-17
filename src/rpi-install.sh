@@ -171,7 +171,10 @@ Install-SpaceVim () {
   echo -ne "\r$red ===============================================\n$white"
   
   # Install docker-compose
-  curl -sSL https://get.docker.com | sh
+  curl -fsSL https://get.docker.com -o get-docker.sh
+  sudo sh get-docker.sh
+  sudo dpkg --configure -a
+  sudo sh get-docker.sh
   sudo usermod -aG docker ${USER}
   sudo apt install docker-compose
   sudo systemctl enable docker
