@@ -173,7 +173,7 @@ Install-SpaceVim () {
   # Install docker-compose
   curl -sSL https://get.docker.com | sh
   sudo usermod -aG docker ${USER}
-  sudo pip3 -q install docker-compose
+  sudo apt install docker-compose
   sudo systemctl enable docker
 }
 
