@@ -1,6 +1,7 @@
 #!/bin/bash
 # Author:
 #   - Brian Almaguer (GitHub@balmabrian)
+# Modified by Thomas W. C. Carlson in May 2022
 
 # Set colors
 Set-Colors () {
