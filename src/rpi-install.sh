@@ -172,14 +172,14 @@ NetworkInstall () {
 Docker-Preinstall () {
   # Install docker-compose
   curl -fsSL https://get.docker.com -o get-docker.sh
-  echo -ne "\r$cyn If the installation fails here, then Docker still requires a restart to install ;"
-  echo -ne "Use sudo reboot and then input the following sequence of commands: ;"
-  echo -ne "sudo dpkg --configure -a ;"
-  echo -ne "sudo sh get-docker.sh ;"
-  echo -ne "sudo usermod -aG docker ${USER} ;"
-  echo -ne "sudo apt install docker-compose ;"
-  echo -ne "sudo systemctl enable docker ;"
-  echo -ne "Verify docker with `docker ps` and verify docker-compose by navigating to /EnginePythonServer and trying `docker-compose` $white ;"
+  echo -ne "\r$cyn If the installation fails here, then Docker still requires a restart to install \n"
+  echo -ne "Use sudo reboot and then input the following sequence of commands: \n"
+  echo -ne "sudo dpkg --configure -a \n"
+  echo -ne "sudo sh get-docker.sh \n"
+  echo -ne "sudo usermod -aG docker ${USER} \n"
+  echo -ne "sudo apt install docker-compose \n"
+  echo -ne "sudo systemctl enable docker \n"
+  echo -ne "Verify docker with `docker ps` and verify docker-compose by navigating to /EnginePythonServer and trying `docker-compose` $white \n"
   sudo sh get-docker.sh
   sudo dpkg --configure -a
   sudo sh get-docker.sh
